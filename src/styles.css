@@ -1,0 +1,224 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+@import "@fontsource/dm-serif-display/400.css";
+@import "@fontsource/fira-sans/300.css";
+@import "@fontsource/fira-sans/400.css";
+@import "@fontsource/fira-sans/500.css";
+@import "@fontsource/fira-sans/600.css";
+@import "@fontsource/fira-sans/700.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * MasterOS · Emerald Prestige
+ * Verde esmeralda profundo + dourado + creme.
+ * Fontes: DM Serif Display (display) + Fira Sans (body).
+ * Tokens de cor definidos em oklch. Trocar paleta = editar :root / .dark.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --font-sans: "Fira Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "DM Serif Display", ui-serif, Georgia, serif;
+}
+
+/* Emerald Prestige — light */
+:root {
+  --radius: 0.625rem;
+
+  --background: oklch(0.985 0.012 95);           /* creme #f5f0e0 */
+  --foreground: oklch(0.22 0.04 160);            /* verde esmeralda muito escuro */
+
+  --card: oklch(0.995 0.006 95);
+  --card-foreground: oklch(0.22 0.04 160);
+  --popover: oklch(0.995 0.006 95);
+  --popover-foreground: oklch(0.22 0.04 160);
+
+  --primary: oklch(0.22 0.01 90);                /* preto suave */
+  --primary-foreground: oklch(0.98 0.01 95);
+
+  --secondary: oklch(0.94 0.02 92);              /* creme claro */
+  --secondary-foreground: oklch(0.22 0.01 90);
+
+  --muted: oklch(0.93 0.02 92);
+  --muted-foreground: oklch(0.45 0.02 90);
+
+  --accent: oklch(0.76 0.13 88);                 /* dourado #c9a84c */
+  --accent-foreground: oklch(0.22 0.01 90);
+
+  --destructive: oklch(0.55 0.22 25);
+  --destructive-foreground: oklch(0.98 0.02 95);
+
+  --border: oklch(0.88 0.02 92);
+  --input: oklch(0.90 0.02 92);
+  --ring: oklch(0.76 0.13 88);
+
+  --chart-1: oklch(0.22 0.01 90);
+  --chart-2: oklch(0.55 0.02 90);
+  --chart-3: oklch(0.76 0.13 88);
+  --chart-4: oklch(0.45 0.02 90);
+  --chart-5: oklch(0.85 0.10 90);
+
+  --sidebar: oklch(0.995 0.006 95);              /* branco/creme */
+  --sidebar-foreground: oklch(0.22 0.01 90);
+  --sidebar-primary: oklch(0.76 0.13 88);        /* dourado */
+  --sidebar-primary-foreground: oklch(0.22 0.01 90);
+  --sidebar-accent: oklch(0.94 0.02 92);
+  --sidebar-accent-foreground: oklch(0.22 0.01 90);
+  --sidebar-border: oklch(0.88 0.02 92);
+  --sidebar-ring: oklch(0.76 0.13 88);
+}
+
+/* Emerald Prestige — dark */
+.dark {
+  --background: oklch(0.18 0.03 165);
+  --foreground: oklch(0.95 0.02 92);
+
+  --card: oklch(0.22 0.04 165);
+  --card-foreground: oklch(0.95 0.02 92);
+  --popover: oklch(0.22 0.04 165);
+  --popover-foreground: oklch(0.95 0.02 92);
+
+  --primary: oklch(0.72 0.14 158);               /* emerald claro */
+  --primary-foreground: oklch(0.16 0.04 165);
+
+  --secondary: oklch(0.28 0.05 165);
+  --secondary-foreground: oklch(0.95 0.02 92);
+
+  --muted: oklch(0.26 0.04 165);
+  --muted-foreground: oklch(0.75 0.03 90);
+
+  --accent: oklch(0.80 0.13 88);                 /* dourado mais claro */
+  --accent-foreground: oklch(0.18 0.04 165);
+
+  --destructive: oklch(0.65 0.22 25);
+  --destructive-foreground: oklch(0.98 0.02 95);
+
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 14%);
+  --ring: oklch(0.72 0.14 158);
+
+  --chart-1: oklch(0.72 0.14 158);
+  --chart-2: oklch(0.80 0.13 88);
+  --chart-3: oklch(0.55 0.12 165);
+  --chart-4: oklch(0.85 0.10 90);
+  --chart-5: oklch(0.45 0.10 150);
+
+  --sidebar: oklch(0.16 0.04 165);
+  --sidebar-foreground: oklch(0.95 0.02 92);
+  --sidebar-primary: oklch(0.80 0.13 88);
+  --sidebar-primary-foreground: oklch(0.16 0.04 165);
+  --sidebar-accent: oklch(0.24 0.05 165);
+  --sidebar-accent-foreground: oklch(0.95 0.02 92);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.80 0.13 88);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html, body {
+    font-family: var(--font-sans);
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-feature-settings: "cv11", "ss01";
+  }
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+    font-weight: 400;
+  }
+}
+
+@utility bg-emerald-gradient {
+  background-image: linear-gradient(135deg,
+    oklch(0.22 0.05 165) 0%,
+    oklch(0.32 0.09 165) 55%,
+    oklch(0.42 0.10 158) 100%);
+}
+
+@utility bg-gold-gradient {
+  background-image: linear-gradient(135deg,
+    oklch(0.76 0.13 88) 0%,
+    oklch(0.85 0.11 90) 100%);
+}
+
+@utility shadow-prestige {
+  box-shadow:
+    0 1px 2px oklch(0.22 0.04 160 / 0.08),
+    0 8px 24px -8px oklch(0.22 0.04 160 / 0.18);
+}
+
+/* ============================================================
+ * Landing — Black + Electric Blue (matches MOS logo)
+ * Scoped tokens usados só na home marketing (.landing-scope).
+ * ============================================================ */
+.landing-scope {
+  --l-bg: oklch(0.06 0.01 260);         /* preto profundo com tinta azul */
+  --l-bg-2: oklch(0.10 0.02 260);
+  --l-surface: oklch(0.13 0.03 260);
+  --l-border: oklch(1 0 0 / 0.08);
+  --l-fg: oklch(0.98 0.005 260);
+  --l-muted: oklch(0.72 0.02 260);
+  --l-blue: oklch(0.60 0.24 260);        /* azul elétrico #1e5cff-ish */
+  --l-blue-bright: oklch(0.70 0.22 258);
+  --l-blue-glow: oklch(0.60 0.24 260 / 0.35);
+
+  background: var(--l-bg);
+  color: var(--l-fg);
+}
+
+@utility landing-hero-glow {
+  background:
+    radial-gradient(60% 50% at 50% 0%, var(--l-blue-glow) 0%, transparent 60%),
+    radial-gradient(40% 40% at 80% 20%, oklch(0.60 0.24 260 / 0.18) 0%, transparent 70%);
+}
+
+@utility landing-grid-bg {
+  background-image:
+    linear-gradient(oklch(1 0 0 / 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(1 0 0 / 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
